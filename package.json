@@ -1,0 +1,26 @@
+{
+  "name": "back-end-qa",
+  "version": "0.0.1",
+  "description": "Back end for Become a QA Course",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BaltazarCortina/BackEndQA.git"
+  },
+  "author": "Baltazar Cortina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BaltazarCortina/BackEndQA/issues"
+  },
+  "homepage": "https://github.com/BaltazarCortina/BackEndQA#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
