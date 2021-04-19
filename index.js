@@ -14,7 +14,6 @@ app.get('/', (req, res) => {
 })
 
 app.post('/register', (req, res) => {
-	// Chequear si el usuario ya existe!
 	let userExist = false;
 	for (let i = 0; i < users.length; i++) {
 		if (req.body.email === users[i].email) {
@@ -41,10 +40,14 @@ app.post('/register', (req, res) => {
 
 app.put('/login', (req, res) => {
 	let validUser = false;
+	var status = 404;
 	for (let i = 0; i < users.length; i++) {
 		if (req.body.email === users[i].email) {
 			if (req.body.password === users[i].password) {
 				validUser = true;
+				var userName = users[i].name;
+			} else {
+				var status = 401;
 			}
 		}
 	}
@@ -52,10 +55,13 @@ app.put('/login', (req, res) => {
 		console.log('--New login--\nUser:')
 		console.log('-email: ' + req.body.email);
 		console.log('-password: ' + req.body.password);
-		res.send({ result: 'Success' });	
+		res.send({
+			result: 'Success',
+			name: userName
+		});	
 	} else {
 		console.log('--Invalid User--');
-		res.status(401).send({ result: 'Failed' });
+		res.status(status).send({result: 'Failed' });
 	}
 	
 })
