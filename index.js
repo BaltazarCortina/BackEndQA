@@ -4,14 +4,9 @@ const app = express();
 const port = 4000;
 
 app.use(cors());
-
 app.use(express.json());
 
 var users = []
-
-app.get('/', (req, res) => {
-	res.send('Holaa!!');
-})
 
 app.post('/register', (req, res) => {
 	let userExist = false;
@@ -20,6 +15,7 @@ app.post('/register', (req, res) => {
 			userExist =true
 		}
 	}
+
 	if (!userExist) {
 		const newUser = {
 			name: req.body.name,
@@ -35,7 +31,6 @@ app.post('/register', (req, res) => {
 		console.log('--User already exists--');
 		res.status(400).send({ result: 'Failed' });
 	}
-	
 })
 
 app.put('/login', (req, res) => {
@@ -51,6 +46,7 @@ app.put('/login', (req, res) => {
 			}
 		}
 	}
+
 	if (validUser) {
 		console.log('--New login--\nUser:')
 		console.log('-email: ' + req.body.email);
@@ -63,7 +59,6 @@ app.put('/login', (req, res) => {
 		console.log('--Invalid User--');
 		res.status(status).send({result: 'Failed' });
 	}
-	
 })
 
 app.listen(port, () => {
