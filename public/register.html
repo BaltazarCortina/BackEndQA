@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Ubuntu+Condensed&display=swap">
+</head>
+<body>
+    <div id="register" class="container">
+        <div id="main-section">
+            <ul id="navegation" class="flex-container">
+                <li class="nav-bar">
+                    <a href="login.html">Login</a>
+                </li>
+                <li>
+                    |
+                </li>
+                <li class="active-page nav-bar">
+                    <a href="register.html">Register</a>
+                </li>
+            </ul>
+            <form action="" method="post" autocomplete="on">
+                <div>
+                    <label for="name">
+                        Full name:
+                    </label>
+                    <input id="name" class="field" type="text" name="name" required placeholder="Enter your name and surname">    
+                </div>
+                <div>
+                    <label for="email">
+                        Email:
+                    </label>
+                    <input id="email" class="field" type="email" name="email" required placeholder="Enter your email">    
+                </div>
+                <div>
+                    <label for="password">
+                        Password:
+                    </label>
+                    <input id="password" class="field" type="password" name="password" required placeholder="Enter your password">    
+                </div>
+                <div>
+                    <label for="repeat-password">
+                        Confirm  password:
+                    </label>
+                    <input id="repeat-password" class="field" type="password" name="repeat-password" required placeholder="Confirm password">    
+                </div>
+                <div class="flex-container">
+                    <input id="reset-button" class="button2 form-button" type="reset" value="Reset">
+                    <input class="button1 form-button" type="submit" value="Sign up">    
+                </div>
+            </form>
+        </div>
+        <div id="validation">
+            <button id="run-validations" class="button2">Run Validations</button>
+            <div id="validation-results">
+            </div>
+        </div>
+    </div>
+    <script src="js/dom-validations.js"></script>
+    <script src="js/dom-register.js"></script>
+    <script src="js/input-validations.js"></script>
+    <script src="js/submit-validations.js"></script>
+    <script src="js/input-register.js"></script>
+</body>
+</html>

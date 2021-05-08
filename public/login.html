@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Ubuntu+Condensed&display=swap">
+</head>
+<body>
+    <div id="login" class="container">
+        <div id="main-section">
+            <ul id="navegation" class="flex-container">
+                <li class="active-page nav-bar">
+                    <a href="login.html">Login</a>
+                </li>
+                <li>
+                    |
+                </li>
+                <li class="nav-bar">
+                    <a href="register.html">Register</a>
+                </li>
+            </ul>
+            <form action="" method="post" autocomplete="on">
+                <div>
+                    <label for="email">
+                        Email:
+                    </label>
+                    <input id="email" class="field" type="email" name="email" placeholder="Enter your email" required>    
+                </div>
+                <div>
+                    <label for="password">
+                        Password:
+                    </label>
+                    <input id="password" class="field" type="password" name="password" placeholder="Enter your password" required>    
+                </div>
+                <span id="no-account">
+                    <a href="register.html">Don't have an account?</a>
+                </span>
+                <div class="flex-container">
+                    <input class="button2 form-button" type="reset" value="Reset">
+                    <input class="button1 form-button" type="submit" value="Sign in">    
+                </div>
+            </form>    
+        </div>
+        <div id="validation">
+            <button id="run-validations" class="button2">Run Validations</button>
+            <div id="validation-results" class="hidden">
+            </div>
+        </div>
+    </div>
+    <script src="js/dom-validations.js"></script>
+    <script src="js/dom-login.js"></script>
+    <script src="js/input-validations.js"></script>
+    <script src="js/submit-validations.js"></script>
+    <script src="js/input-login.js"></script>
+</body>
+</html>

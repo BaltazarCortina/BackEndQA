@@ -5,6 +5,7 @@ const port = 4000;
 
 app.use(cors());
 app.use(express.json());
+app.use(express.static('public'));
 
 var users = []
 
@@ -62,5 +63,5 @@ app.put('/login', (req, res) => {
 })
 
 app.listen(port, () => {
-	console.log(`Example app listening at http://localhost:${port}`);
+	console.log(`Server started at http://localhost:${port}`);
 })

@@ -1,0 +1,217 @@
+body {
+    background-color: #4b4cb4;
+    font-family: 'Open Sans', sans-serif;
+}
+form {
+    padding: 20px 50px;
+    margin: 20px auto 0;
+}
+input, label {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+label {
+    color:#2c2c2c;
+}
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+.flex-container {
+    display: flex;
+    justify-content: center;
+}
+.active-page {
+    border-bottom: 3px solid #4143a0;
+}
+.nav-bar:hover {
+    border-bottom: 3px solid #7477b9;
+}
+.field {
+    border: 2px solid #b9b9b9;
+    border-radius: 6px;
+    font-family: 'Open Sans', sans-serif;;
+}
+.field:focus, .field:hover {
+    border: 2px solid #4143a0;
+    outline: none;
+    background-color: #eaebff;
+}
+.button1, .button2 {
+    width: 30%;
+    padding: 10px;
+    border-radius: 6px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+    outline: none;
+}
+.button1, .button1:active {
+    border: none;
+    background-color: #4143a0;
+    color: #f2f2f2;
+}
+.button2 {
+    border: 2px solid #4143a0;
+    background-color: #ffffff;
+    color: #2c2c2c;
+}
+.button1:hover {
+    background-color: #7477b9;
+}
+.button2:hover {
+    border: 2px solid #7477b9;
+    background-color: #7477b9;
+    color: #ffffff;
+}
+.button2:active {
+    border: 2px solid #4143a0;
+    background-color: #4143a0;
+    color: #ffffff;
+}
+.form-button {
+    margin: 10px 5%;
+}
+.hidden {
+    display: none;
+}
+.passed {
+    color: green;
+}
+.failed {
+    color: rgb(155, 0, 0);
+}
+.underline {
+    text-decoration: underline;
+}
+.input-data {
+    color: #2c2c2c;
+}
+.error, .error:hover {
+    border: 2px solid #ce2323;
+}
+.error-message {
+    padding: 0 10px 5px;
+    text-align: end;
+    font-size: 0.9em;
+    color: #ce2323;
+}
+.disabled, .disabled:hover {
+    border: 2px solid #b9b9b9;
+    background-color: #b9b9b9;
+    color: #ffffff;
+    cursor: not-allowed;
+}
+.register-successfull {
+    position: relative;
+    top: -20px;
+    text-align: center;
+    font-weight: bold;
+    color: green;
+}
+.login-successfull {
+    padding: 80px 0 120px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.6em;
+}
+.register-failed {
+    position: relative;
+    top: -20px;
+    text-align: center;
+    font-weight: bold;
+    color: #ce2323;
+}
+.login-failed {
+    position: relative;
+    top: -20px;
+    text-align: center;
+    font-weight: bold;
+    color: #ce2323;
+}
+#login {
+    margin-top: 200px;
+}
+#register {
+    margin-top: 130px;
+}
+#main-section {
+    width: 60%;
+    padding-top: 30px;
+    margin: auto;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+#navegation li {
+    padding: 5px;
+    margin: 10px 5px;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#navegation a:link, #navegation a:visited {
+    text-decoration: none;
+    color: #2c2c2c;
+}
+#navegation a:hover {
+    color: #505050;  
+}
+#no-account {
+    display: block;
+    padding: 0 10px 10px;
+    text-align: end;
+}
+#no-account a:link, #no-account a:visited {
+    text-decoration: none;
+    font-size: 0.9em;
+    color: #505050;
+}
+#no-account a:hover {
+    font-weight: bold;
+    color: #4143a0;
+}
+#validation {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    padding: 20px 20px;
+    margin: 50px auto 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+#run-validations {
+    margin: 0 auto;
+}
+#validation-results {
+    line-height: 1.5;
+}
+#validation-results li {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+@media only screen and (max-width: 768px) {
+    #main-section, #validation {
+        width: 460px;
+    }
+}
+@media only screen and (max-height: 900px) {
+    #register {
+        margin-top: 100px;
+    }
+}
+@media only screen and (max-height: 800px) {
+    #register {
+        margin-top: 50px;
+    }
+    #login {
+        margin-top: 100px;
+    }
+}
