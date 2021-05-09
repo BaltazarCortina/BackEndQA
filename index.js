@@ -7,7 +7,11 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static('public'));
 
-var users = []
+var users = [{
+	name: 'admin',
+	email: 'admin@email.com',
+	password: 'admin123'
+}]
 
 app.post('/register', (req, res) => {
 	let userExist = false;
