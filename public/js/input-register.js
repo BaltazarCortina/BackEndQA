@@ -28,11 +28,9 @@ function handleRegister(e) {
         .then(res => handleError(res))
         .then(res => res.json())
         .then(res => {
-            console.log(res.result);
             registerSuccessfull();
         })
-        .catch(error => {
-            console.log(error + '\nUser already exists');
+        .catch(() => {
             registerFailed();
         })
     }

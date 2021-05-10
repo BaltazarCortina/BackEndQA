@@ -23,11 +23,9 @@ function handleLogin(e) {
         .then(res => handleError(res))
         .then(res => res.json())
         .then(res => {
-            console.log(res.result);
             loginSuccessfull(res.name);
         })
         .catch(error => {
-            console.log(error + '\nUser does not exist or the password is not valid');
             loginFailed(error.message);
         })
     }
