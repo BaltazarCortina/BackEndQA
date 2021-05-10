@@ -26,7 +26,9 @@ Automated tests for the forms created for the 9th, 10th and 11th weekly problems
 
 
 **To run the test to register a new account and log into it:**
+
 *The purpose of this test is to validate that you can log into an account that was just registered.*
+
 *The test is in a separate file to be able to run it independently from the rest of the Register and Login tests,*
 *beacuse there's not a database to store the user's information.*
 1. Open a terminal in the project's folder
