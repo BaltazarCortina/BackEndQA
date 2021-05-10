@@ -4,6 +4,8 @@
 
 Automated tests for the forms created for the 9th, 10th and 11th weekly problems.
 
+After running the tests, the server should be restarted before running them again.
+
 **To run all the tests:**
 1. Open a terminal in the project's folder
 2. Enter the command 'npm run start' to start the server
@@ -34,4 +36,4 @@ Automated tests for the forms created for the 9th, 10th and 11th weekly problems
 1. Open a terminal in the project's folder
 2. Enter the command 'npm run start' to start the server
 3. Open a new terminal in the project's folder
-4. Enter the command: 'npm run test-register'
+4. Enter the command: 'npm run test-reg-log'

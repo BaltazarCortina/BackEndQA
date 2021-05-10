@@ -3,7 +3,7 @@ const RegisterPage = require('../pageobjects/register.page');
 describe('Testing Register section:', () => {
     it ('Should allow registration of a new account with valid inputs', () => {
         RegisterPage.open();
-        RegisterPage.register('Valid User','user@email.com', 'user1234', 'user1234');
+        RegisterPage.register('Valid User','user123@email.com', 'user1234', 'user1234');
 
         expect(RegisterPage.registerResult).toHaveText('Successfully created user!');
     })
