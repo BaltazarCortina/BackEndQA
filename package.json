@@ -8,7 +8,8 @@
     "dev": "nodemon index",
     "test": "npx wdio run ./wdio.conf.js",
     "test-login": "npx wdio run ./wdio.conf.js --spec login.e2e.js",
-    "test-register": "npx wdio run ./wdio.conf.js --spec register.e2e.js"
+    "test-register": "npx wdio run ./wdio.conf.js --spec register.e2e.js",
+    "test-reg-log": "npx wdio run ./wdio.conf.js --spec register-and-login.e2e.js"
   },
   "repository": {
     "type": "git",
