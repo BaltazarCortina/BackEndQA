@@ -19,11 +19,11 @@ class RegisterPage extends Page {
         super.open('register.html');
     }
 
-    register (name, email, password) {
+    register (name, email, password, rptPassword) {
         this.inputName.setValue(name);
         this.inputEmail.setValue(email);
         this.inputPassword.setValue(password);
-        this.inputRptPassword.setValue(password);
+        this.inputRptPassword.setValue(rptPassword);
         this.submit();
     }
 

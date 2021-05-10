@@ -5,9 +5,10 @@ class LoginPage extends Page {
     get inputEmail () { return $('#email') }
     get inputPassword () { return $('#password') }
     get submitBtn () { return $('input[type="submit"]') }
-    
+
     get successfullLogin () { return $('div.login-successfull') }
     get loginResult () { return $('#login-result') }
+    
     get emailErrorMsg () { return $('.error-message*=email') }
     get passwordErrorMsg () { return $('.error-message*=password') }
 
