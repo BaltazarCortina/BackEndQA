@@ -7,11 +7,18 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static('public'));
 
-var users = [{
-	name: 'admin',
-	email: 'admin@email.com',
-	password: 'admin123'
-}]
+var users = [
+	{
+		name: 'Admin1',
+		email: 'admin@email.com',
+		password: 'admin123'
+	},
+	{
+		name: 'Admin2',
+		email: 'otheradmin@email.com',
+		password: 'admin456'
+	}
+]
 
 app.post('/register', (req, res) => {
 	let userExist = false;
@@ -46,8 +53,10 @@ app.put('/login', (req, res) => {
 			if (req.body.password === users[i].password) {
 				validUser = true;
 				var userName = users[i].name;
+				break;
 			} else {
 				var status = 401;
+				break;
 			}
 		}
 	}

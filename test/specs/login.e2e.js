@@ -1,18 +1,36 @@
 const LoginPage = require('../pageobjects/login.page');
 
 describe('Testing Login section:', () => {
-    it ('Should allow access with correct credentials', () => {
-        LoginPage.open();
-        LoginPage.login('admin@email.com', 'admin123');
+    describe('Should allow access with correct credentials', () => {
+        it ('Allow access for Admin1', () => {
+            LoginPage.open();
+            LoginPage.login('admin@email.com', 'admin123');
+    
+            expect(LoginPage.successfullLogin).toHaveText('Welcome Admin1');
+        })
 
-        expect(LoginPage.successfullLogin).toExist();
+        it ('Allow access for Admin2', () => {
+            LoginPage.open();
+            LoginPage.login('otheradmin@email.com', 'admin456');
+    
+            expect(LoginPage.successfullLogin).toHaveText('Welcome Admin2');
+        })
     })
 
-    it ('Should deny access with wrong credentials', () => {
-        LoginPage.open();
-        LoginPage.login('user@email.com', 'user1234');
-
-        expect(LoginPage.loginResult).toHaveText('The user does not exist!');
+    describe('Should deny access with wrong credentials', () => {
+        it ('Inexistent account', () => {
+            LoginPage.open();
+            LoginPage.login('user@email.com', 'user1234');
+    
+            expect(LoginPage.loginResult).toHaveText('The user does not exist!');
+        })
+        
+        it ('Wrong password', () => {
+            LoginPage.open();
+            LoginPage.login('admin@email.com', 'user1234');
+    
+            expect(LoginPage.loginResult).toHaveText('The password is incorrect!');
+        })
     })
 
     describe('Should throw error with invalid input and hide it when correcting', () => {
@@ -56,7 +74,4 @@ describe('Testing Login section:', () => {
             expect(browser.getAlertText()).toEqual('One or more fields are not correct!');
         })
     })
-
-    // browser.pause(2000);
-
 })
