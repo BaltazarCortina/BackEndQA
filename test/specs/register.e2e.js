@@ -95,7 +95,4 @@ describe('Testing Register section:', () => {
             expect(browser.getAlertText()).toEqual('One or more fields are not correct!');
         })
     })
-
-    // browser.pause(2000);
-
 })

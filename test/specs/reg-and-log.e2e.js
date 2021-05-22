@@ -4,10 +4,10 @@ const LoginPage = require('../pageobjects/login.page');
 /*
  * The purpose of this test is to validate that you can log into an account that was just registered.
  * The test is in a separate file to be able to run it independently from the rest of the Register and Login tests, 
- * beacuse there's not a database to store the user's information.
+ * because there's not a database to store the user's information.
 */
 
-describe('Testing registering a new account and loging into it:', () => {
+describe('Testing registering a new account and logging into it:', () => {
     it ('Should allow registration of a new account with valid inputs', () => {
         RegisterPage.open();
         RegisterPage.register('New User','newuser@email.com', 'user1234', 'user1234');

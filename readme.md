@@ -32,7 +32,7 @@ After running the tests, the server should be restarted before running them agai
 *The purpose of this test is to validate that you can log into an account that was just registered.*
 
 *The test is in a separate file to be able to run it independently from the rest of the Register and Login tests,*
-*beacuse there's not a database to store the user's information.*
+*because there's not a database to store the user's information.*
 1. Open a terminal in the project's folder
 2. Enter the command 'npm run start' to start the server
 3. Open a new terminal in the project's folder
